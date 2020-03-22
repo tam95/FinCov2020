@@ -1,6 +1,6 @@
 <template>
   <div>
-    <WidgetsDropdown/>
+    <!-- <WidgetsDropdown/> -->
     <CCard>
       <CCardBody>
         <CRow>
@@ -28,7 +28,7 @@
         </CRow>
         <MainChartExample style="height:300px;margin-top:40px;"/>
       </CCardBody>
-      <CCardFooter>
+      <!-- <CCardFooter>
         <CRow class="text-center">
           <CCol md sm="12" class="mb-sm-2 mb-0">
             <div class="text-muted">Visits</div>
@@ -80,10 +80,10 @@
             />
           </CCol>
         </CRow>
-      </CCardFooter>
+      </CCardFooter> -->
     </CCard>
-    <WidgetsBrand/>
-    <CRow>
+    <!-- <WidgetsBrand/> -->
+    <!-- <CRow>
       <CCol md="12">
         <CCard>
           <CCardHeader>
@@ -449,7 +449,7 @@
           </CCardBody>
         </CCard>
       </CCol>
-    </CRow>
+    </CRow> -->
   </div>
 </template>
 

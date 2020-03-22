@@ -26,7 +26,7 @@
       </CHeaderNavItem>
       <CHeaderNavItem class="px-3">
         <CHeaderNavLink>
-          Settings
+          Report
         </CHeaderNavLink>
       </CHeaderNavItem>
     </CHeaderNav>
