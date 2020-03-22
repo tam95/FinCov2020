@@ -57,6 +57,12 @@ const Register = () => import('@/views/pages/Register')
 const Users = () => import('@/views/users/Users')
 const User = () => import('@/views/users/User')
 
+// Report
+const Report = () => import('@/views/report/Report')
+
+// Report
+const Analysis = () => import('@/views/analysis/Analysis')
+
 Vue.use(Router)
 
 export default new Router({
@@ -78,6 +84,16 @@ function configRoutes () {
           path: 'dashboard',
           name: 'Dashboard',
           component: Dashboard
+        },
+        {
+          path: 'report',
+          name: 'Report',
+          component: Report
+        },
+        {
+          path: 'analysis',
+          name: 'Analysis',
+          component: Analysis
         },
         {
           path: 'theme',
