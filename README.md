@@ -1,3 +1,8 @@
+#### Publish
+
+The project published at: https://fincov2020.herokuapp.com/dashboard#/analysis
+
+
 
 #### Usage
 
