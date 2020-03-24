@@ -26,7 +26,7 @@
       </CHeaderNavItem>
       <CHeaderNavItem class="px-3">
         <CHeaderNavLink to="/analysis" exact>
-          Analysis
+          Analysis in Finland
         </CHeaderNavLink>
       </CHeaderNavItem>
       
