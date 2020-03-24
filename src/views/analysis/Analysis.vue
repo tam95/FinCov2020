@@ -8,7 +8,7 @@
       </CCard>
       <CCard>
         <CCardBody>
-          <MainChartExample style="height:300px;margin-top:40px;" />
+          <MainChartExample style="height:60vh;margin-top:40px;" />
         </CCardBody>
       </CCard>
     </CCol>
