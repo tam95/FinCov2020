@@ -23,3 +23,8 @@ npm run test:unit
 npm run test:e2e
 
 ```
+
+#### API
+
+Used api: https://w3qa5ydb4l.execute-api.eu-west-1.amazonaws.com/prod/finnishCoronaData
+Git: https://github.com/HS-Datadesk/koronavirus-avoindata
