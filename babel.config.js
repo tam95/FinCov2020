@@ -7,5 +7,13 @@ module.exports = {
         corejs: 3
       }
     ]
+  ],
+  plugins: [
+    ["@babel/plugin-transform-runtime", {
+      "corejs": false,
+      "helpers": false,
+      "regenerator": true,
+      "useESModules": false
+    }]
   ]
 }
