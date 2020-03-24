@@ -3,7 +3,7 @@ module.exports = {
   runtimeCompiler: true,
   publicPath: process.env.NODE_ENV === 'production'
     ? '/public/'
-    : '/public/',
+    : '/',
   configureWebpack: {
     //Necessary to run npm link https://webpack.js.org/configuration/resolve/#resolve-symlinks
     resolve: {
