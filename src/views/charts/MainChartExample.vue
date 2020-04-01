@@ -1,11 +1,16 @@
 <template>
   <div>
-    <CChartLine style="height: 50vh" :datasets="dataset" :options="defaultOptions" :labels="labels" />
+    <CChartLine
+      style="height: 50vh"
+      :datasets="dataset"
+      :options="defaultOptions"
+      :labels="labels"
+    />
     <CRow>
       <CCol col="12" sm="2"></CCol>
       <CCol col="12" sm="1">
         <CCallout color="info">
-          <small class="text-muted">New Cases</small>
+          <small class="text-muted">All Cases</small>
           <br />
           <strong class="h4">{{numbers.confirmed}}</strong>
         </CCallout>
@@ -25,7 +30,8 @@
         </CCallout>
       </CCol>
     </CRow>
-    <b>Data is fetched at:</b> {{fetchedDate}}
+    <b>Data is fetched at:</b>
+    {{fetchedDate}}
   </div>
 </template>
 
@@ -60,6 +66,7 @@ export default {
       endDate = new Date();
     this.labels = this.getDateArray(startDate, endDate);
     const brandRecovered = getStyle("success2") || "#4dbd74";
+    const brandNewCase = "#fca503";
     const brandInfected = getStyle("info") || "#20a8d8";
     const brandDead = getStyle("danger") || "#f86c6b";
     const data1 = [];
@@ -74,10 +81,17 @@ export default {
       this.fetchedData.recovered,
       this.labels
     );
+
     let deadCases = this.mappingDataByDate(
       this.fetchedData.deaths,
       this.labels
     );
+
+    let newCases = this.mappingDataByDateWihoutAccumulate(
+      this.fetchedData.confirmed,
+      this.labels
+    );
+
     this.numbers.confirmed = this.maxCases =
       confirmedCases[confirmedCases.length - 1];
     this.numbers.recovered = recoveredCases[recoveredCases.length - 1];
@@ -90,6 +104,14 @@ export default {
         pointHoverBackgroundColor: brandInfected,
         borderWidth: 2,
         data: confirmedCases
+      },
+      {
+        label: "New cases",
+        backgroundColor: hexToRgba(brandNewCase, 10),
+        borderColor: brandNewCase,
+        pointHoverBackgroundColor: brandNewCase,
+        borderWidth: 2,
+        data: newCases
       },
       {
         label: "Recovered",
@@ -193,6 +215,21 @@ export default {
           }
         }
         finalResult.push(numberToAccumulate);
+      }
+      return finalResult;
+    },
+    mappingDataByDateWihoutAccumulate(data, dates) {
+      let finalResult = [];
+      for (let i = 0; i < dates.length; i++) {
+        const date = dates[i];
+        let numberPerDate = 0;
+        for (let j = 0; j < data.length; j++) {
+          const datum = data[j];
+          if (date === this.formatDate(datum.date)) {
+            numberPerDate++;
+          }
+        }
+        finalResult.push(numberPerDate);
       }
       return finalResult;
     }
