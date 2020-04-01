@@ -59,6 +59,7 @@ const User = () => import('@/views/users/User')
 
 // Report
 const Report = () => import('@/views/report/Report')
+const HeatMap = () => import('@/views/heatmap/HeatMap')
 
 // Report
 const Analysis = () => import('@/views/analysis/Analysis')
@@ -89,6 +90,11 @@ function configRoutes () {
           path: 'report',
           name: 'Report',
           component: Report
+        },
+        {
+          path: 'heatmap',
+          name: 'HeatMap',
+          component: HeatMap
         },
         {
           path: 'analysis',
