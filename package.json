@@ -3,19 +3,16 @@
   "version": "3.0.1",
   "description": "Open Source Bootstrap Admin Template",
   "author": {
-    "name": "CoreUI",
-    "url": "https://coreui.io",
-    "github": "https://github.com/coreui",
-    "twitter": "https://twitter.com/core_ui"
+    "name": "Tam Nguyen",
+    "github": "https://github.com/tam95"
   },
   "contributors": [
     {
-      "name": "CoreUI Team",
-      "url": "https://github.com/orgs/coreui/people"
+      "name": "Tam Nguyen"
     }
   ],
-  "homepage": "http://coreui.io",
-  "copyright": "Copyright 2020 creativeLabs Łukasz Holeczek",
+  "homepage": "https://github.com/tam95",
+  "copyright": "Tam Nguyen - OriginSyntax Oy",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
